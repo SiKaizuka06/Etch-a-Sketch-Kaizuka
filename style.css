@@ -14,21 +14,21 @@ html {
 .square {
   background-color: white;
   border: 1px solid black;
-}
-
-.color {
-  background-color: gray;
-  border: 1px solid black;
+  outline-offset: -1px;
+  box-sizing: border-box;
+  flex: 1 0 calc(100% / var(--grid-size));
+  opacity: 0;
 }
 
 .gridContainer {
+  --grid-size: 16;
   margin-top: 25px;
   margin-right: 40px;
-  display: inline-grid;
-  grid-template-columns: repeat(16, 2fr);
-  grid-template-rows: repeat(16, 2fr);
+  display: flex;
+  flex-wrap: wrap;
   border: 5px solid black;
   border-radius: 5px;
   height: 575px;
   width: 575px;
+  box-sizing: border-box;
 }
